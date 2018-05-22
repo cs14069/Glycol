@@ -1,0 +1,6 @@
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle-amd64
+export PATH=${JAVA_HOME}/bin:${PATH}
+javac -encoding UTF-8 -cp lib/mysql-connector-java-5.1.42-bin.jar:lib/jsonic-1.1.3.jar Main/*.java
+java -Dfile.encoding=UTF-8 -cp .:lib/jsonic-1.1.3.jar:lib/mysql-connector-java-5.1.42-bin.jar:glycol Main/Glycol
+
+

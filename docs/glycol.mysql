@@ -1,0 +1,31 @@
+create database glycol;
+use glycol;
+
+create table orderTable (
+  log_date char(10) not null,
+  log_time char(8) not null,
+  side varchar(4) not null,
+  amount double not null,
+  outstanding_size double not null,
+  average_price int not null,
+  child_order_acceptance_id varchar(32) not null,
+  child_order_state varchar(10) not null,
+  sold boolean not null
+);
+
+create table collateral (
+  log_date char(10) not null,
+  log_time char(8) not null,
+  rest_position double not null,
+  collateral int not null,
+  open_position_pnl int not null,
+  require_collateral int not null,
+  keep_rate double not null
+);
+
+create table log (
+  log_date char(10) not null,
+  log_time char(8) not null,
+  cost int not null,
+  sell_rate int not null
+);
